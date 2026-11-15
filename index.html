@@ -1,6 +1,33 @@
-<!-- WhatsApp Button -->
-<a href="https://wa.me/917396735255?text=Hi%20Ashwini%20Mam%2C%20mujhe%20New%20World%20Students%20me%20admission%20chahiye" 
-   style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:14px 20px; border-radius:50px; font-weight:bold; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.3); z-index:999; font-family:Arial;">
-   💬 Chat on WhatsApp
-</a>
+<!DOCTYPE html>
+<html>
+<head>
+<title>New World Students</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box">
+<h2>🎓 New World Students</h2>
+<p class="subtitle">Kadapa - Admission Form</p>
+
+<input type="text" id="name" placeholder="Student ka Naam">
+<input type="text" id="phone" placeholder="Parent ka Mobile Number">
+
+<select id="class">
+<option value="">Class Select Karo</option>
+<option value="6">Class 6 - ₹800 / month</option>
+<option value="7">Class 7 - ₹800 / month</option>
+<option value="8">Class 8 - ₹900 / month</option>
+<option value="9">Class 9 - ₹1000 / month</option>
+<option value="10">Class 10 - ₹1200 / month</option>
+</select>
+
+<button onclick="submitForm()">Admission Ke Liye Apply Karo</button>
+
+<div id="result"></div>
+<p id="count"></p>
+</div>
+
+<script src="script.js"></script>
 </body>
+</html>
