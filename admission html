@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>New World Students - Admission</title>
+<style>
+body{font-family:Arial;background:#f0f7ff;margin:0;padding:20px}
+.box{max-width:450px;background:white;margin:auto;padding:25px;border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,0.1)}
+h2{text-align:center;color:#1a5c2a}
+input,select{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:8px;box-sizing:border-box}
+button{width:100%;padding:14px;background:#25D366;color:white;border:none;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer}
+#result{margin-top:15px;padding:12px;background:#e8f5e9;border-radius:8px;display:none}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>🎓 New World Students</h2>
+<p style="text-align:center">Kadapa - Admission Form</p>
+
+<input type="text" id="name" placeholder="Student ka Naam">
+<input type="text" id="phone" placeholder="Parent ka Mobile Number">
+
+<select id="class">
+<option value="">Class Select Karo</option>
+<option value="6">Class 6 - ₹800 / month</option>
+<option value="7">Class 7 - ₹800 / month</option>
+<option value="8">Class 8 - ₹900 / month</option>
+<option value="9">Class 9 - ₹1000 / month</option>
+<option value="10">Class 10 - ₹1200 / month</option>
+</select>
+
+<button onclick="submitForm()">Admission Ke Liye Apply Karo</button>
+
+<div id="result"></div>
+<p id="count" style="text-align:center;color:gray;font-size:13px"></p>
+</div>
+
+<script>
+function submitForm(){
+  let name = document.getElementById('name').value;
+  let phone = document.getElementById('phone').value;
+  let cls = document.getElementById('class').value;
+
+  if(name=="" || phone=="" || cls==""){
+    alert("Please saare box bharo!");
+    return;
+  }
+
+  // JavaScript ka kaam - Fees nikalna
+  let fees = {6:800, 7:800, 8:900, 9:1000, 10:1200};
+  
+  let result = document.getElementById('result');
+  result.style.display = "block";
+  result.innerHTML = "✅ <b>Thank You " + name + "!</b><br>Class " + cls + " ke liye Fees: <b>₹" + fees[cls] + "/month</b><br>Hum aapko jald call karenge.";
+
+  // Abhi ke liye Browser me save ho raha hai (Backend aane ke baad Server me save hoga)
+  let old = localStorage.getItem('students') || "0";
+  let total = parseInt(old) + 1;
+  localStorage.setItem('students', total);
+  document.getElementById('count').innerText = "Abhi tak Total Applications: " + total;
+}
+</script>
+</body>
+</html>
