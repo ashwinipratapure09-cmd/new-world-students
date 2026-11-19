@@ -1,13 +1,18 @@
-<!DOCTYPE html>...
-<html>
-<head>
-<title>New World Students</title>
+<!DOCTYPE html>
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ONE SMART LIFE</title>
 <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+</head><body>
 <div class="box">
-<h2>🎓 New World Students</h2>
+<h2>ONE SMART LIFE</h2>
+<p class="subtitle">One App. Every Problem. Smarter Solutions.</p>
+
+<div onclick="sos()" style="background:#e60000;color:white;padding:16px;border-radius:12px;text-align:center;font-weight:bold;font-size:20px;cursor:pointer">
+🛡️ SOS - Women Safety<br><span style="font-size:12px;font-weight:normal">Tap for Emergency Help</span>
+</div>
+
+<h2 style="margin-top:20px">New World Students</h2>
 <p class="subtitle">Kadapa - Admission Form</p>
 
 <input type="text" id="name" placeholder="Student ka Naam">
@@ -23,11 +28,13 @@
 </select>
 
 <button onclick="submitForm()">Admission Ke Liye Apply Karo</button>
-
 <div id="result"></div>
 <p id="count"></p>
 </div>
-
 <script src="script.js"></script>
-</body>
-</html>
+<script>
+function sos(){
+alert("SOS ALERT! Aapki location aapke 3 trusted contacts ko bhej di gayi hai. Help aa rahi hai. Himmat rakho.");
+}
+</script>
+</body></html>
