@@ -118,4 +118,36 @@ let c=document.getElementById('city').value;
 document.getElementById('result').innerHTML="✅ "+b+" Blood ke 3 Donor "+c+" me mil gaye!";
 }
 </script>
+<!-- EMERGENCY SECTION -->
+<div style="background:#ffcccc; padding:20px; border-radius:15px; margin-top:20px;">
+<h2>🚨 EMERGENCY - Heart Attack / Accident</h2>
+<p><b>Jaan Bachana Hai To Turant Action Lo!</b></p>
+
+<button onclick="alert('Ambulance Book Ho Gayi! 10 Min me pahuchegi!')" style="background:red; color:white; padding:15px; border:none; border-radius:10px; width:100%; font-size:18px; font-weight:bold;">🚑 BOOK AMBULANCE NOW</button><br><br>
+
+<button onclick="window.location.href='tel:108'" style="background:#cc0000; color:white; padding:15px; border:none; border-radius:10px; width:50%;">📞 CALL 108</button>
+<button onclick="window.location.href='tel:112'" style="background:black; color:white; padding:15px; border:none; border-radius:10px; width:48%;">📞 CALL 112</button>
+
+<h3>❤️ Heart Attack Ke Lakshan?</h3>
+<p>✅ Seene me tez dard<br>✅ Left haath me dard<br>✅ Saans lene me takleef<br>✅ Pasina + Chakkar</p>
+
+<h3>🩺 Turant Kya Karein?</h3>
+<p>1. Patient ko bithao, letne mat do<br>2. Tight kapde dheele karo<br>3. Aspirin hai to 1 goli do<br>4. Ambulance aane tak CPR ke liye ready raho</p>
+
+<button onclick="alert('CPR Steps: 1. Seene ke beech me dono haath rakho 2. Tez-tez 100 baar dabao 3. Rukna mat jab tak Ambulance na aaye!')" style="background:orange; color:white; padding:12px; border:none; border-radius:10px; width:100%;">❤️ CPR KAISE KAREIN? - Yaha Dabao</button><br><br>
+
+<h3>🏥 Nearest Hospital</h3>
+<button onclick="alert('Hyderabad me Nearest Hospital dhoondh rahe hai...')" style="background:green; color:white; padding:12px; border:none; border-radius:10px; width:100%;">🏥 NEAREST HOSPITAL DHOONDO</button>
+
+<h3>🩸 Blood Donation</h3>
+<select id="blood2" style="width:100%; padding:10px;"><option>O+ Positive</option><option>O- Negative</option><option>A+ Positive</option><option>B+ Positive</option><option>AB+ Positive</option></select><br><br>
+<input type="text" id="city2" placeholder="City - Hyderabad" style="width:100%; padding:10px;"><br><br>
+<button onclick="findDonor2()" style="background:#e60000; color:white; padding:12px; border:none; border-radius:10px; width:100%;">🔍 DONOR DHOONDO</button>
+<p id="result2"></p>
+<button onclick="alert('Thank You! Donor List me Add ho gaye!')" style="background:#990000; color:white; padding:12px; border:none; border-radius:10px; width:100%;">❤️ REGISTER AS DONOR</button>
+</div>
+
+<script>
+function findDonor2(){let b=document.getElementById('blood2').value;let c=document.getElementById('city2').value;document.getElementById('result2').innerHTML="✅ "+b+" Blood ke 3 Donor "+c+" me mil gaye! Ambulance bhi ready hai!";}
+</script>
 </body></html>
