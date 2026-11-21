@@ -86,4 +86,36 @@ ur:{s:"🛡️ SOS - Khawateen Hifazat",u:"Emergency Help ke liye Dabain",a:"SOS
 function setLang(l){lang=l;document.getElementById('sosText').innerText=T[l].s;document.getElementById('sosSub').innerText=T[l].u;}
 function sos(){alert(T[lang].a);}
 </script>
+<!-- BLOOD DONATION SECTION -->
+<div class="box" style="background:#ffe6e6; padding:20px; border-radius:15px; margin-top:20px;">
+<h2>🩸🚑 44. Blood Donation & Ambulance</h2>
+<p>Jaan Bachana Sabse Pehle!</p>
+
+<h3>🚑 Emergency Ambulance</h3>
+<button onclick="alert('Ambulance Book Ho Gayi!')" style="background:red; color:white; padding:12px; border:none; border-radius:10px; width:100%; margin:5px 0;">🚑 BOOK AMBULANCE NOW</button>
+<button onclick="alert('108 ko Call lag rahi hai...')" style="background:#ff3333; color:white; padding:12px; border:none; border-radius:10px; width:100%;">📞 CALL 108</button>
+
+<h3>🩸 Blood Chahiye?</h3>
+<select id="blood" style="width:100%; padding:10px; margin:5px 0;">
+<option>O+ Positive</option>
+<option>O- Negative</option>
+<option>A+ Positive</option>
+<option>B+ Positive</option>
+<option>AB+ Positive</option>
+</select>
+<input type="text" id="city" placeholder="Apna City likho - Hyderabad" style="width:100%; padding:10px; margin:5px 0;">
+<button onclick="findDonor()" style="background:green; color:white; padding:12px; border:none; border-radius:10px; width:100%;">🔍 DONOR DHOONDO</button>
+<p id="result"></p>
+
+<h3>❤️ Blood Dena Hai?</h3>
+<button onclick="alert('Thank You! Donor List me Add ho gaye!')" style="background:#e60000; color:white; padding:12px; border:none; border-radius:10px; width:100%;">❤️ REGISTER AS DONOR</button>
+</div>
+
+<script>
+function findDonor(){
+let b=document.getElementById('blood').value;
+let c=document.getElementById('city').value;
+document.getElementById('result').innerHTML="✅ "+b+" Blood ke 3 Donor "+c+" me mil gaye!";
+}
+</script>
 </body></html>
